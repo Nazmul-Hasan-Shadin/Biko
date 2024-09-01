@@ -4,7 +4,7 @@ const Product = ({product}) => {
   return (
     <div>
    
-      <div className="md:max-w-xs relative bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 p-4">
+      <div className=" max-w-[270px]  sm:max-w-xs relative bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 p-4">
         <div className="">
           <img
             src={product.image}

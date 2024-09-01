@@ -6,10 +6,10 @@ const Banner = () => {
   return (
     <div>
       <Container>
-        <div className="flex flex-col md:flex-row lg:flex-row gap-4 justify-between">
+        <div className="flex flex-col md:flex-row lg:flex-row gap-4 items-center justify-between">
           {/* ==============left side for heading text============= */}
           <div className="bg-gradient-to-r from-[#7188C4] to-[#6F3AFA] text-transparent bg-clip-text">
-            <div className="md:w-[700px] space-y-6">
+            <div className="lg:w-[700px] space-y-6">
               <h2 className="text-4xl font-semibold">
                 যেকোনো প্রকার স্বাস্থ্য সেবা <br /> এবং ডাক্তারি পরামর্শ দেয়া হয়{" "}
                 <br /> "সরকারি রেজিস্ট্রার্ড ডাক্তার <br /> দ্বারা রুগী দেখা হয়"
@@ -28,7 +28,7 @@ const Banner = () => {
 
           {/* ====================right side image=============== */}
           <div className="mx-auto md:mx-0">
-            <img src={bannerImage} alt="" />
+            <img className="object-cover" src={bannerImage} alt="" />
           </div>
         </div>
       </Container>

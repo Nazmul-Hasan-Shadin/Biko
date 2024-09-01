@@ -11,8 +11,8 @@ const Navbar = () => {
   return (
     <div>
       <Container>
-        <div className="flex gap-9 px-3 md:px-0  py-7 items-center justify-between ">
-          <img className="w-32 h-" src={logo} alt="" />
+        <div className="flex  md:gap-9  sm:px-3 md:px-0  py-7 items-center justify-between ">
+          <img className=" w-24 md:w-32 h-" src={logo} alt="" />
 
           {/* ============search field ==================== */}
           <div className="flex-1 border  hidden md:block">

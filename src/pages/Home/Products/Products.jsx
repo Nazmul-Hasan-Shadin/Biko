@@ -71,7 +71,7 @@ const Products = () => {
     const slider = sliderRef.current;
     const slideWidth = slider.offsetWidth; 
     console.log(slideWidth,'iam offset width');
-    const scrollStep = 300; 
+    const scrollStep = 316; 
 
     const autoSlide = setInterval(() => {
       if (slider.scrollLeft + slideWidth >= slider.scrollWidth) {
