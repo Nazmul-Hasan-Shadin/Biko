@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Product from "./Product";
 import Container from "../../../Container/Container";
 
@@ -55,15 +55,70 @@ const productData = [
   },
 ];
 
+
 const Products = () => {
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    sliderRef.current.scrollLeft -= 300; 
+  };
+
+  const scrollRight = () => {
+    sliderRef.current.scrollLeft += 300;
+  };
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const slideWidth = slider.offsetWidth; 
+    console.log(slideWidth,'iam offset width');
+    const scrollStep = 300; 
+
+    const autoSlide = setInterval(() => {
+      if (slider.scrollLeft + slideWidth >= slider.scrollWidth) {
+
+        slider.scrollLeft = 0;
+      } else {
+        slider.scrollLeft += scrollStep;
+      }
+    }, 2000);
+
+   
+    return () => {
+      clearInterval(autoSlide);
+    };
+  }, []);
+
   return (
     <div className="p-4">
       <Container>
         <h3 className="text-3xl my-8">Products</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {productData.map((product) => (
-            <Product key={product.id} product={product} />
-          ))}
+        <div className="relative">
+          {/* Scroll buttons */}
+          <button
+            onClick={scrollLeft}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded"
+          >
+            {"<"}
+          </button>
+          <button
+            onClick={scrollRight}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded"
+          >
+            {">"}
+          </button>
+
+          {/* Slider Container */}
+          <div
+            ref={sliderRef}
+            className="flex overflow-x-scroll scrollbar-hide space-x-4"
+            style={{ scrollBehavior: "smooth" }}
+          >
+            {productData.map((product, index) => (
+              <div key={index} className="min-w-[300px]">
+                <Product product={product} />
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </div>
