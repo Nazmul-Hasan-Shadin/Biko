@@ -15,8 +15,7 @@ import Footer from "../../Footer/Footer";
 const Home = () => {
   return (
     <div>
-      <Navbar />
-
+   
       <Banner />
       <Services />
       <VideoSection />
@@ -26,7 +25,7 @@ const Home = () => {
       <BikoMedicalTreatment />
       <BikoMedicalTreatment  image={doctorImage}/>
       <Products/>
-      <Footer/>
+   
       
     </div>
   );

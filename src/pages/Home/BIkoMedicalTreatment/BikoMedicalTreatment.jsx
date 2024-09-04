@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../../../Container/Container";
 
-const BikoMedicalTreatment = ({image}) => {
+const BikoMedicalTreatment = ({ image }) => {
   return (
     <div className="my-10">
       <Container>

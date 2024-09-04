@@ -6,7 +6,8 @@ import bottomImageOfFooter from "../../assets/images/logo/footer.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#343434] text-white px-5 md:px-[70px] py-[55px]">
+<div className="w-full">
+<div className="bg-[#343434] text-white px-5 md:px-[70px]  py-[55px]">
       <div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <div className="space-y-4">
@@ -49,6 +50,7 @@ const Footer = () => {
         <img src={bottomImageOfFooter} className="pt-7" alt="" />
       </div>
     </div>
+</div>
   );
 };
 
