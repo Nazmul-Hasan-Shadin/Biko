@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
-      <Container>
-        <div className="flex  md:gap-9  sm:px-3 md:px-0  py-7 items-center justify-between ">
+      <Container >
+        <div className="flex sm:px-3  md:gap-9   md:px-0  py-7 items-center justify-between ">
          <Link to={'/'}> <img className=" w-24 md:w-32 h-" src={logo} alt="" /></Link>
 
           {/* ============search field ==================== */}

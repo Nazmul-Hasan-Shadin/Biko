@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home/Home";
 import Doctors from "../pages/Doctors/Doctors";
 import ProductsPage from "../pages/Products/ProductsPage";
 import HealthAwareness from "../pages/HealthAwareness/HealthAwareness";
+import BestDoctorList from "../pages/BestDoctors/BestDoctorList";
+import DoctorsInformation from "../pages/DoctorsInformation/DoctorsInformation";
 
 
 export const router = createBrowserRouter([
@@ -28,6 +30,15 @@ export const router = createBrowserRouter([
         path: "/health-awareness",
         element: <HealthAwareness />,
       },
+      {
+        path: "/doctors-list",
+        element: <BestDoctorList />,
+      },
+      {
+        path: "/doctors-information",
+        element: <DoctorsInformation />,
+      },
     ],
+
   },
 ]);

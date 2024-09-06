@@ -140,14 +140,11 @@ const productData = [
 const ProductsPage = () => {
   return (
     <div className="p-4">
+      <BikoMedicalTreatment image={medicalTreatmentImage} />
       <Container>
-        <BikoMedicalTreatment image={medicalTreatmentImage} />
         <div className="relative">
-          {/* Scroll buttons */}
-
-          {/* Slider Container */}
           <div
-            className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-2 "
+            className="grid grid-cols-1  justify-items-center md:grid-cols-3 lg:grid-cols-5 gap-4 "
             style={{ scrollBehavior: "smooth" }}
           >
             {productData.map((product, index) => (

@@ -19,6 +19,7 @@ const Home = () => {
       <Banner />
       <Services />
       <VideoSection />
+      <BikoMedicalTreatment image={medicalTreatmentImage}></BikoMedicalTreatment>
       <Services />
       <BikoMedicalTreatment  image={medicalTreatmentImage}/>
       <Products></Products>

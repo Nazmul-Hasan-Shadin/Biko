@@ -12,13 +12,13 @@ const Services = () => {
             <Link to={"/doctors"}>
               <ServiceCard text={"Emergancy Helpline"} />
             </Link>
-            <Link to={"/products"}>
+            <Link to={"/doctors-list"}>
               {" "}
               <ServiceCard text={"Bd Best Doctors"} />
             </Link>
             <Link to={'/health-awareness'}><ServiceCard text={"Health and Awareness"} /></Link>
-            
-            <ServiceCard text={"Medicine & Medical Accessory"} />
+         
+          <Link to={'/products'}>  <ServiceCard text={"Medicine & Medical Accessory"} /></Link>
           </div>
         </div>
       </Container>

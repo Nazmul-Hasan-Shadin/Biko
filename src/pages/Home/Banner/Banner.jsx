@@ -1,6 +1,7 @@
 import React from "react";
 import bannerImage from "../../../assets/images/banner/banner.png";
 import Container from "../../../Container/Container";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -21,9 +22,10 @@ const Banner = () => {
                 দ্বারা রুগী দেখা হয়"
               </h4>
             </div>
-            <button className="py-2 font-bold text-xl mt-8  bg-[#6F3AFA] text-white px-9 rounded-[8px]">
+           <Link to={'/doctors-information'}>
+           <button className="py-2 font-bold text-xl mt-8  bg-[#6F3AFA] text-white px-9 rounded-[8px]">
               বিস্তারিত দেখুন
-            </button>
+            </button></Link>
           </div>
 
           {/* ====================right side image=============== */}

@@ -17,7 +17,7 @@ const VideoSection = () => {
             allowfullscreen
           ></iframe>
 
-          <img className="mt-12" src={medicalTreatmentImage} alt="" />
+     
         </div>
       </Container>
     </div>

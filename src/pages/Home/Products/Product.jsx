@@ -9,14 +9,14 @@ const Product = ({product}) => {
           <img
             src={product.image}
             alt={product.title}
-            className=" w-2/3 md:w-full   h-auto object-cover"
+            className=" md:w-full   h-auto object-cover"
           />
           <div style={{borderRadius:'0px 10px 0px 23.42px'}} className="absolute top-0 h-[54px] w-14  right-0 bg-red-500 text-white text-xs font-bold px-2 py-1 ">
             {product.discountPercentage}
           </div>
         </div>
         <div className="mt-4 text-center">
-          <h2 className="text-lg font-semibold">{product.title}</h2>
+          <h2 className="lg:text-lg font-semibold">{product.title}</h2>
           <p className="text-sm text-gray-500">Points: {product.points}</p>
           <div className="flex items-center justify-center gap-2 mt-2">
             <span className="text-gray-500 line-through">
