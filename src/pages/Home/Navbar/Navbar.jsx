@@ -6,13 +6,14 @@ import { IoMdSearch } from "react-icons/io";
 import { RxAvatar } from "react-icons/rx";
 import { IoCartOutline } from "react-icons/io5";
 import Container from "../../../Container/Container";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div>
       <Container>
         <div className="flex  md:gap-9  sm:px-3 md:px-0  py-7 items-center justify-between ">
-          <img className=" w-24 md:w-32 h-" src={logo} alt="" />
+         <Link to={'/'}> <img className=" w-24 md:w-32 h-" src={logo} alt="" /></Link>
 
           {/* ============search field ==================== */}
           <div className="flex-1 border  hidden md:block">

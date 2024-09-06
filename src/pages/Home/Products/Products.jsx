@@ -55,12 +55,11 @@ const productData = [
   },
 ];
 
-
 const Products = () => {
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {
-    sliderRef.current.scrollLeft -= 300; 
+    sliderRef.current.scrollLeft -= 300;
   };
 
   const scrollRight = () => {
@@ -69,20 +68,18 @@ const Products = () => {
 
   useEffect(() => {
     const slider = sliderRef.current;
-    const slideWidth = slider.offsetWidth; 
-    console.log(slideWidth,'iam offset width');
-    const scrollStep = 316; 
+    const slideWidth = slider.offsetWidth;
+    console.log(slideWidth, "iam offset width");
+    const scrollStep = 316;
 
     const autoSlide = setInterval(() => {
       if (slider.scrollLeft + slideWidth >= slider.scrollWidth) {
-
         slider.scrollLeft = 0;
       } else {
         slider.scrollLeft += scrollStep;
       }
     }, 2000);
 
-   
     return () => {
       clearInterval(autoSlide);
     };
